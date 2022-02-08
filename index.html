@@ -130,14 +130,17 @@
     requestAnimationFrame(render);
 
     window.onload = function starttime() {
-      time(h1, '2022,02,07'); // 在一起的时间
+      time(h1, '2022-02-07'); // 在一起的时间
       ptimer = setTimeout(starttime, 1000); // 添加计时器
     }
 
     function time(obj, futimg) {
       var nowtime = new Date().getTime(); // 现在时间转换为时间戳
-      window.alert(nowtime)
       var futruetime = new Date(futimg).getTime(); // 未来时间转换为时间戳
+      window.alert(nowtime)
+      window.alert(futimg)
+      window.alert(futruetime)
+      
       var msec = nowtime - futruetime; // 毫秒 未来时间-现在时间
       var time = (msec / 1000); // 毫秒/1000
       window.alert(time)
